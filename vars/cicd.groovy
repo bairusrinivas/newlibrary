@@ -14,3 +14,8 @@ def runselenium(path)
 {
   sh "java -jar $path/testing.jar"
 }
+def newDelivery(ip,contextpath)
+{
+  "scp /home/ubuntu/.jenkins/workspace/Declerativepipelinewithsharedlibrary/webapp/target/webapp.war ubuntu@${ip}:/var/lib/tomcat9/webapps/${contextpath}.war"
+}
+
